@@ -1,4 +1,4 @@
-"""Download a PxWeb table (PSA OpenSTAT and other statistics offices) unchanged to a gzipped CSV.
+r"""Download a PxWeb table (PSA OpenSTAT and other statistics offices) unchanged to a gzipped CSV.
 
 Pulls every value of every variable, one geography at a time to stay under the
 PxWeb cell limit, retries with exponential backoff, and decodes Latin-1 when
@@ -15,6 +15,9 @@ Example (PSA, bottom-30% CPI, 2018=100):
 
 --geo-regex keeps only geography labels that match (e.g. country and regions,
 not provinces). Check the number of geographies printed against what you expect.
+--select CODE=REGEX (repeatable) keeps only the values of variable CODE whose label
+matches REGEX (e.g. the rice item of a 354-item CPI table), to stay under the cell
+limit. Values themselves are never altered; log the selection in source_log.md.
 """
 
 import argparse
@@ -32,26 +35,28 @@ GEO_CODES = ("Geolocation", "Area", "Region", "Geography")
 def post(url, query):
     for attempt in range(5):
         try:
-            r = requests.post(url, json=query, timeout=120)
+            r = requests.post(url, json=query, timeout=(15, 90))
             r.raise_for_status()
             try:
                 return r.content.decode("utf-8-sig")
             except UnicodeDecodeError:
                 return r.content.decode("latin-1")
-        except requests.RequestException:
+        except requests.RequestException as e:
+            print(f"[retry {attempt + 1}: {type(e).__name__}]", end="", flush=True)
             if attempt == 4:
                 raise
             time.sleep(2 ** (attempt + 1))
 
 
-def main():
+def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument("api_base")
     ap.add_argument("table")
     ap.add_argument("out")
     ap.add_argument("--geo-regex", default=None)
     ap.add_argument("--force", action="store_true")
-    a = ap.parse_args()
+    ap.add_argument("--select", action="append", default=[], help="CODE=REGEX on value labels")
+    a = ap.parse_args(argv)
     out = Path(a.out)
     if out.exists() and not a.force:
         print("exists:", out)
@@ -59,12 +64,23 @@ def main():
     url = a.api_base.rstrip("/") + "/" + a.table
     meta = requests.get(url, timeout=60).json()
     geo = next((v for v in meta["variables"] if v["code"] in GEO_CODES), None)
-    rest = [{"code": v["code"], "selection": {"filter": "all", "values": ["*"]}}
-            for v in meta["variables"] if v is not geo]
+    sel_rx = dict(x.split("=", 1) for x in a.select)
+    rest = []
+    for v in meta["variables"]:
+        if v is geo:
+            continue
+        if v["code"] in sel_rx:
+            rx_v = re.compile(sel_rx[v["code"]])
+            vals = [c for c, t in zip(v["values"], v["valueTexts"]) if rx_v.search(t)]
+            if not vals:
+                raise SystemExit(f"--select {v['code']} matched nothing")
+            rest.append({"code": v["code"], "selection": {"filter": "item", "values": vals}})
+        else:
+            rest.append({"code": v["code"], "selection": {"filter": "all", "values": ["*"]}})
     if geo is None:
         codes = [None]
     else:
-        rx = re.compile(a.geo_regex) if a.geo_regex else None
+        rx = re.compile(a.geo_regex, re.I) if a.geo_regex else None
         codes = [c for c, t in zip(geo["values"], geo["valueTexts"]) if rx is None or rx.match(t)]
     parts = []
     for code in codes:
@@ -73,6 +89,7 @@ def main():
             sel.insert(0, {"code": geo["code"], "selection": {"filter": "item", "values": [code]}})
         text = post(url, {"query": sel, "response": {"format": "csv"}})
         parts.append(pd.read_csv(io.StringIO(text), dtype=str, keep_default_na=False))
+        print(".", end="", flush=True)
         time.sleep(0.5)
     df = pd.concat(parts, ignore_index=True)
     out.parent.mkdir(parents=True, exist_ok=True)

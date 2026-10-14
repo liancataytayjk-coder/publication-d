@@ -1,0 +1,8 @@
+{
+  "fuel": "cpi_fuel_tr",
+  "fuel_median_abs_dev": {
+    "cpi_fuel_hh": 6.338282834404296,
+    "cpi_fuel_tr": 0.0001989869684138057
+  },
+  "fuel_replicated": true
+}

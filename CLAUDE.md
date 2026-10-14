@@ -85,10 +85,12 @@ poverty-line family.
 | D2 | 14 Oct 2026 | Rice price = PSA CPI item "01.1.1.12 – Rice". Fuel price = whichever of 04.5 "Electricity, gas and other fuels" or 07.2.2 "Fuels and lubricants for personal transport equipment" is closer to Table 1 FPI (median absolute deviation of regional means); the other is a robustness alternative. | The paper does not name the fuel item; the table settles it (skill rule 1.2). | pre-registered |
 | D3 | 14 Oct 2026 | Replicate the PVAR with one lag. | Stata `pvar` (Abrigo and Love 2016) default `lags(1)`; the paper reports none. Two lags as a check. | pre-registered |
 | D4 | 14 Oct 2026 | ENSO = NOAA Oceanic Niño Index (ONI), entered in levels (not logged). | The paper describes an SST anomaly over centred 30-year base periods, which is the ONI definition; an anomaly can be negative. | pre-registered |
-| D5 | 14 Oct 2026 | Geography: 17 regions in PSA's *old* geographic code (long history 1994–Dec 2025). Extend to Jan–Sep 2026 by chaining new-code monthly growth onto old-code levels; regions VI and VII lose Negros to the new Negros Island Region (NIR) in the new code, so their 2026 months are flagged `new_geo_ext` and dropped in robustness check (k). NIR is not a unit. | Old-code tables end Dec 2025; new-code tables run to Sep 2026; the reference uses 17 regions. | pre-registered |
+| D5 | 14 Oct 2026 | Geography: 17 regions in PSA's *old* geographic code (long history 1994–Dec 2025). Extend to Jan–Sep 2026 by chaining new-code monthly growth onto old-code levels; regions whose boundaries differ between the codes have their 2026 months flagged `new_geo_ext` and dropped in robustness check (k). NIR is not a unit. *Amended 14 Oct 2026 (before any estimate):* the overlap check (`output/tables/geo_overlap_check.csv`) shows identical 2018–2025 series for 13 regions and differences for VI and VII (Negros moved to NIR) and also XII and BARMM (Cotabato City), so all four are flagged. | Old-code tables end Dec 2025; new-code tables run to Sep 2026; the reference uses 17 regions. | pre-registered |
 | D6 | 14 Oct 2026 | Law date: first post-RTL month = March 2019 (`post` = 1 from 2019M3). | RA 11203 approved 14 Feb 2019; in force 15 days after publication, commonly dated 5 March 2019 (`paper/policy_context.md` P1–P2). | pre-registered |
 | D7 | 14 Oct 2026 | World rice shock f_t = 100·Δln(Thai 5% USD/t × PHP/USD), nominal pesos; the reference's real-peso version is robustness (a). | Outcomes are nominal CPI changes; a nominal shock keeps both sides in the same units. The Thai 5% is the reference's world price and the longest Pink Sheet rice series. | pre-registered |
 | D8 | 14 Oct 2026 | Local projection lead set: Teulings–Zubanov leads 1..h−1 (as in Kpodar and Liu 2022 and the bundled `lp.py`). | The reference paper uses a VAR, so it does not fix the lead set; we keep the skill's tested default. | pre-registered |
+| D10 | 14 Oct 2026 | Fuel price inflation (FPI) in the replica = CPI item 07.2.2 (transport fuels). | G1b: exact match to Table 1. | pre-registered rule, applied |
+| D11 | 14 Oct 2026 | Proceed to estimation although G3 failed, **conditionally**: G1 and G2 validate the data and the core estimator (the national/pooled response); G3 concerns the reference's group ordering, read by eye from figures. Every document reports the G3 failure; the regional heterogeneity results (RQ4) are labelled "not validated against the reference". The user may overrule and ask for estimation to stop. | Skill rule: if a gate fails, say so and label later results as conditional on the choice to continue. | decision after the gate result |
 | D9 | 14 Oct 2026 | Region groups for heterogeneity are taken unchanged from Antonio et al. (2024): rice-insufficient = Table 4 "Insufficient" (NCR, CALABARZON, Central Visayas, Zamboanga Peninsula, Northern Mindanao, Davao); high poverty = Table 3 "High". | Groups fixed by a published source before any estimate, built from pre-period data (2015 FIES; production), so they cannot be chosen after the results. | pre-registered |
 
 ## Replication gate (pre-registered 14 Oct 2026, before any data were downloaded)
@@ -116,7 +118,22 @@ All on the reference sample (17 regions, old geographic code).
 Indicative only (not part of the gate): the local projection on the reference
 sample gives a positive cumulative pass-through of THAI to RPI at h = 1–3.
 
-**Result:** pending (`output/tables/replication_gate.csv`).
+**Result (run 14 Oct 2026): FAIL on G3; G1, G1b and G2 PASS** (`output/tables/replication_gate.csv`).
+
+- G1: rice CPI means and SDs match Table 1 in 17 of 17 regions (median deviation 0.000).
+- G1b: the fuel item is 07.2.2 "Fuels and lubricants for personal transport equipment"
+  (17 of 17, median deviation 0.000; 04.5 deviates by 6.3 points). This settles D2.
+- G2: THAI → RPI response 0.256 at h = 1 (95% band 0.215 to 0.303), peak at h = 1,
+  0.01 of the peak by h = 6; FPI → RPI 0.143 at impact, −0.04 of impact by h = 3. All pass.
+- G3: peak ratio insufficient/sufficient = 1.26 (range [1.3, 3.0]): **fail**; peak
+  high-poverty 0.260 vs low-poverty 0.255: **fail** (should be lower).
+- What was checked after the failure (no code error found): the two-lag model gives a
+  ratio of 1.27 (`replication_g3_diagnostic.csv`). *Exploratory:* the paper's wording
+  is about the immediate impact and persistence, not the peak; on those measures the
+  pattern holds (impact ratio 1.69; low-poverty impact 0.236 vs high 0.102; six-month
+  cumulative 0.676 vs 0.572). The pre-registered criterion is not changed.
+- Indicative LP on the reference sample: cumulative pass-through of the real THAI
+  shock 0.08 at h = 1, 0.15 at h = 3, 0.17 at h = 6 (all with 90% bands above zero).
 
 ## Estimation plan (pre-specified 14 Oct 2026, before any estimate on the new data)
 
