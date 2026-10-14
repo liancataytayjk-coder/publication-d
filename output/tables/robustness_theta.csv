@@ -1,0 +1,33 @@
+spec,label,h,beta,se,lo,hi
+main,Baseline,6,0.3030,0.1615,0.0373,0.5687
+main,Baseline,12,0.1995,0.2095,-0.1452,0.5442
+a_real_shock,(a) Real shock,6,0.3148,0.1661,0.0416,0.5881
+a_real_shock,(a) Real shock,12,0.2131,0.2211,-0.1505,0.5767
+b_viet5,(b) Viet 5%,6,0.3300,0.2221,-0.0354,0.6954
+b_viet5,(b) Viet 5%,12,0.2897,0.2565,-0.1322,0.7116
+c_usd_fx_control,(c) USD price + FX control,6,0.2508,0.1755,-0.0379,0.5395
+c_usd_fx_control,(c) USD price + FX control,12,0.1860,0.2570,-0.2367,0.6087
+d_macro_controls,(d) Macro controls,6,0.2769,0.1369,0.0517,0.5020
+d_macro_controls,(d) Macro controls,12,0.0642,0.1551,-0.1910,0.3194
+e_p6,(e) 6 lags,6,0.3102,0.1625,0.0429,0.5774
+e_p6,(e) 6 lags,12,0.1907,0.2183,-0.1684,0.5498
+e_p18,(e) 18 lags,6,0.2844,0.1680,0.0079,0.5608
+e_p18,(e) 18 lags,12,0.2259,0.2190,-0.1342,0.5861
+f_no_2008crisis,(f) Without 2007–08 crisis,6,0.3652,0.1516,0.1158,0.6145
+f_no_2008crisis,(f) Without 2007–08 crisis,12,0.2861,0.2034,-0.0484,0.6207
+g_no_2020,(g) Without 2020,6,0.3883,0.1845,0.0849,0.6917
+g_no_2020,(g) Without 2020,12,0.3324,0.2222,-0.0330,0.6979
+h_end_2024m6,(h) Ending June 2024,6,0.1264,0.1774,-0.1654,0.4183
+h_end_2024m6,(h) Ending June 2024,12,0.1959,0.1886,-0.1143,0.5061
+i_symmetric_2012,(i) 2012–2026 window,6,0.4441,0.2001,0.1149,0.7732
+i_symmetric_2012,(i) 2012–2026 window,12,0.3982,0.2404,0.0027,0.7937
+j_asymmetry,(j) Asymmetry,6,0.3328,0.1542,0.0792,0.5865
+j_asymmetry,(j) Asymmetry,12,0.2389,0.1953,-0.0823,0.5601
+k_drop_newgeo,(k) Drop chained 2026,6,0.3102,0.1620,0.0437,0.5767
+k_drop_newgeo,(k) Drop chained 2026,12,0.1995,0.2095,-0.1452,0.5442
+o_cluster_region,(o) Clustered SE,6,0.3030,0.0322,0.2500,0.3559
+o_cluster_region,(o) Clustered SE,12,0.1995,0.0296,0.1508,0.2481
+l_loo,(l) Leave one region out (range),6,0.3048,,0.2860,0.3197
+l_loo,(l) Leave one region out (range),12,0.1987,,0.1882,0.2135
+m_separate,(m) Separate pre/post models,6,0.2535,0.1325,0.0356,0.4715
+m_separate,(m) Separate pre/post models,12,0.0827,0.1038,-0.0880,0.2535

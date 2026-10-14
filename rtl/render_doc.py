@@ -1,4 +1,4 @@
-"""Render a Jinja2 markdown template with the numbers dictionary, then convert to .docx with pandoc.
+r"""Render a Jinja2 markdown template with the numbers dictionary, then convert to .docx with pandoc.
 
 Numbers come from output/tables/paper_numbers.json (written by the paper script),
 so no estimate is ever typed by hand. Jinja comment delimiters are changed to

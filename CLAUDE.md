@@ -91,6 +91,7 @@ poverty-line family.
 | D8 | 14 Oct 2026 | Local projection lead set: Teulings–Zubanov leads 1..h−1 (as in Kpodar and Liu 2022 and the bundled `lp.py`). | The reference paper uses a VAR, so it does not fix the lead set; we keep the skill's tested default. | pre-registered |
 | D10 | 14 Oct 2026 | Fuel price inflation (FPI) in the replica = CPI item 07.2.2 (transport fuels). | G1b: exact match to Table 1. | pre-registered rule, applied |
 | D11 | 14 Oct 2026 | Proceed to estimation although G3 failed, **conditionally**: G1 and G2 validate the data and the core estimator (the national/pooled response); G3 concerns the reference's group ordering, read by eye from figures. Every document reports the G3 failure; the regional heterogeneity results (RQ4) are labelled "not validated against the reference". The user may overrule and ask for estimation to stop. | Skill rule: if a gate fails, say so and label later results as conditional on the choice to continue. | decision after the gate result |
+| D12 | 14 Oct 2026 | National and regional retail RMR/WMR prices: PSA 2018-based survey (old code, extended to 2026 with new-code growth), back-chained on growth rates with the 2012-based survey (2012–2017) and the 1990-based survey (2010–2011); join months 2012M1 and 2018M1 flagged `splice_join`. Wholesale: old-code 2010–2025 extended with new-code growth. Farmgate: new series "other variety" palay, 2010–2026. | Overlap correlations of monthly changes: 2018 vs 2012 base 0.99, 2012 vs 1990 base 0.79. Decided before any estimate. | pre-registered |
 | D9 | 14 Oct 2026 | Region groups for heterogeneity are taken unchanged from Antonio et al. (2024): rice-insufficient = Table 4 "Insufficient" (NCR, CALABARZON, Central Visayas, Zamboanga Peninsula, Northern Mindanao, Davao); high poverty = Table 3 "High". | Groups fixed by a published source before any estimate, built from pre-period data (2015 FIES; production), so they cannot be chosen after the results. | pre-registered |
 
 ## Replication gate (pre-registered 14 Oct 2026, before any data were downloaded)
@@ -231,7 +232,13 @@ in percentage points per 1% world price change; standard errors in parentheses.
 
 ## Documents
 
-Pending (see `paper/` and `docs/` once rendered).
+- `paper/working_paper_template.md` → `scripts/08_paper.py` → `paper/working_paper.{md,docx}`
+- `paper/manuscript_template.md` → `scripts/08_paper.py` → `paper/manuscript.{md,docx}`
+- `docs/analysis_report_template.md` → `scripts/10_analysis_report.py` → `docs/analysis_report.{md,docx}`
+- `output/tables/*` → `scripts/10_analysis_report.py` → `docs/statistical_annex.{md,docx}`
+- `docs/master_narrative_template.md` + all documents + code → `scripts/11_master_document.py` → `docs/master_document.{md,docx}`
+- Numbers: `rtl/numbers.py` → `output/tables/paper_numbers.json`, `paper_tables.json`
+- `paper/SUBMISSION_CHECKLIST.md`, `docs/session_handoff.Rmd` (hand-written, kept current)
 
 ## Pipeline
 
@@ -244,3 +251,6 @@ Pending (see `paper/` and `docs/` once rendered).
 - [ ] Applied rice tariff for April–September 2026 under EO 105.
 - [ ] User to revise the concept note and confirm the target journal or course
       format; no formatting template has been provided yet.
+- [ ] User to accept or overrule D11 (continuing after the G3 failure).
+- [ ] Check the published AJARE (2025) version of Antonio et al. against the MPRA
+      targets used here.

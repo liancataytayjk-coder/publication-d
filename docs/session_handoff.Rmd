@@ -1,0 +1,123 @@
+---
+title: "Session handoff: Opening the Rice Border (Rice Tariffication Law study)"
+subtitle: "Context for a new Claude Code session"
+date: "14 October 2026"
+output:
+  html_document:
+    toc: true
+  word_document:
+    toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+# 0. Read this first (for the new Claude session)
+
+The work is in `liancataytayjk-coder/publication-d`, branch
+**`claude/sleepy-ptolemy-s7u1hc`**. There is no other branch with the work.
+
+```bash
+git fetch origin claude/sleepy-ptolemy-s7u1hc && git checkout claude/sleepy-ptolemy-s7u1hc
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+./run_all.sh            # about 5 minutes; --download refreshes data (needs network)
+```
+
+Read `CLAUDE.md` (brief, decisions D1–D12, replication gate, plan, results, open
+questions), then this file. Use the `empirical-econ-study` skill. Follow section 3.
+
+# 1. How to start a new session (for the user)
+
+1. Go to claude.ai/code and click **New session**.
+2. Pick the repository `publication-d`. Network access must allow PSA OpenSTAT,
+   the World Bank, BSP and NOAA if data are to be refreshed.
+3. Choose branch `claude/sleepy-ptolemy-s7u1hc` if offered.
+4. Upload the files in section 2, if you have them.
+5. First message: "Read `docs/session_handoff.Rmd` on branch
+   `claude/sleepy-ptolemy-s7u1hc` and `CLAUDE.md`, check out the branch, run
+   `./run_all.sh`, then wait."
+
+# 2. Must-upload list (files not in the repository)
+
+| # | File | Why |
+|---|------|-----|
+| 1 | Your own concept note or adviser's brief | the current one (`docs/concept_note.md`) was drafted by Claude |
+| 2 | School or journal formatting template | documents use a plain default format until then |
+| 3 | Course rubric or journal guidelines | page and word limits, required sections |
+| 4 | Group members' and adviser's names | placeholders `[Name 1]`–`[Name 3]` |
+| 5 | Published version of Antonio et al. (AJARE 2025) PDF, if available | targets come from the MPRA working paper |
+
+# 3. Standing rules
+
+- Push only to `claude/sleepy-ptolemy-s7u1hc`; no pull request unless asked.
+- Raw data in `data/raw/` are never edited; every file is logged in `source_log.md`.
+- Outputs only from scripts: edit `*_template.md` or the scripts, never rendered files.
+- Every specification choice goes in the decisions log in `CLAUDE.md`, labelled
+  pre-registered / supplementary / exploratory.
+- Policy facts only from `paper/policy_context.md`; references verified on Crossref.
+- Writing style: simple, define terms (words, then formula, then example), paragraphs
+  over bullets, fragile results stated as fragile.
+
+# 4. The study in one page
+
+**Question.** Did replacing rice import quotas with a 35% tariff (RA 11203, in force
+March 2019) change how much of a world rice price change reaches Philippine consumer,
+retail, wholesale and farmgate prices, and who gains and loses?
+
+**Notation.** $t$ month, $r$ region; $f_t = 100\Delta\ln(\text{Thai 5\%} \times
+\text{PHP/USD})$; $\pi_{rt}$ rice CPI inflation; $B_h$ cumulative pass-through after
+$h$ months; $\theta_h$ its change after the law; $D_t = 100\ln(P^A/P^{B30})$ the
+all-income vs bottom-30% gap; $G_t$ the domestic–world border gap.
+
+**Model.** Local projections, $h = 0..12$, 12 lags, Teulings–Zubanov leads, trend,
+region fixed effects, shock × post interaction, Driscoll–Kraay (panel) or Newey–West
+(national) standard errors, 90% bands; decisive horizons 6 and 12.
+
+**Reference.** Antonio et al. (2024 MPRA; 2025 AJARE), panel VAR, 17 regions, 1994–2023.
+
+# 5. Data facts and answers to likely questions
+
+- Rice CPI = PSA item 01.1.1.12 "Rice", 2018 = 100, backcast by PSA to 1994; official.
+- Bottom-30% CPI and its weights are PSA's; the gap $D$ is ours.
+- 17 regions in PSA's old geographic code to Dec 2025; Jan–Sep 2026 chained from the new
+  code; VI, VII, XII and BARMM flagged in those months (boundaries changed).
+- National retail prices: three PSA surveys joined on growth rates (2010–2011 from the
+  1990-based survey, 2012–2017 from the 2012-based one, 2018 onward 2018-based).
+- Fuel in the replication = CPI 07.2.2 (transport fuels), settled by the exact match to
+  the reference's Table 1.
+- Region groups (rice-deficit, high-poverty) are Antonio et al.'s, not PSA categories.
+
+# 6. Results so far
+
+See `CLAUDE.md`, section "Results", for the numbers with standard errors. In short:
+replication exact on data and main response, failed on region-group ordering (G3);
+consumer pass-through rose after the law at six months (significant at 10%, fragile);
+farmgate/wholesale/retail pass-through rose from about zero to about one half
+(robust); world rice shocks are regressive; the 2024 tariff cut did not reach
+consumers; the 2025–26 suspension was followed by a domestic price surge (exploratory).
+
+# 7. File map
+
+| What | Where | Built by |
+|------|-------|----------|
+| Raw data | `data/raw/` | `scripts/01_download_*.py` |
+| Long tables, panels | `data/processed/` | `02_clean_*.py`, `03_build_panel.py` |
+| Replication gate | `output/tables/replication_*.csv` | `04_replicate.py` |
+| All estimates | `output/tables/estimates.csv`, `rq3_gap.csv` | `05_estimate.py` |
+| Episode | `output/tables/episode_*` | `07_episode_2024.py` |
+| Descriptives | `output/tables/desc_*.csv` | `09_descriptive.py` |
+| Figures | `output/figures/` | `06_figures.py` |
+| Numbers for documents | `output/tables/paper_numbers.json` | `rtl/numbers.py` via `08_paper.py` |
+| Working paper, manuscript | `paper/*.docx` | `08_paper.py` |
+| Analysis report, annex | `docs/*.docx` | `10_analysis_report.py` |
+| Master document | `docs/master_document.docx` | `11_master_document.py` |
+
+# 8. Open items
+
+1. User to decide whether to accept D11 (continue after the G3 failure) or drop RQ4.
+2. User to replace the Claude-drafted concept note and supply a formatting template.
+3. Confirm RA 11203's publication date and the 2026 applied tariff (policy_context).
+4. Check the published AJARE version of Antonio et al. against the MPRA targets.
+5. A thesis proposal document was not produced, because the study is already complete;
+   produce one only if the course requires it.
