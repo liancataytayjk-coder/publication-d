@@ -191,9 +191,43 @@ E4: descriptive farmgate and retail paths during the 2025 import suspension.
 E5 (Objective 1): yearly contribution of rice to headline inflation (weight × rice
 inflation) for all income and the bottom 30%.
 
-## Results
+## Results (14 Oct 2026; `output/tables/estimates.csv`, `rq3_gap.csv`, `episode_*.csv`)
 
-Pending.
+All conditional on D11 (replication gate G3 failed narrowly). Cumulative pass-through
+in percentage points per 1% world price change; standard errors in parentheses.
+
+- **RQ1 (pre-registered).** Regional rice CPI, 1995–2026: pre-law B6 = 0.157 (0.050),
+  B12 = 0.201 (0.072); post-law B6 = 0.460 (0.141), B12 = 0.400 (0.178); change θ6 = 0.303
+  (0.162, significant at 10% only), θ12 = 0.199 (0.210, not significant). H1a weakly
+  supported at 6 months, not at 12. Fragile: θ6 = 0.13 (0.18) with data ending 2024M6
+  (h); θ12 = 0.06 (0.16) with macro controls (d). Stronger in the symmetric 2012–2026
+  window (i): θ6 = 0.44 (0.20). Stable leaving any region out (θ6 0.29–0.32). Placebo
+  law date 2016M3: θ6 = 0.07 (0.10).
+- **RQ2 (pre-registered).** National, 2011–2026: pre-law pass-through ≈ 0 at every
+  stage; post-law B6 farmgate 0.74 (0.25), wholesale 0.61 (0.16), retail 0.53 (0.13),
+  rice CPI 0.45 (0.12); changes significant at h = 6 for all; at h = 12 only the
+  wholesale/retail/CPI changes are near 10%. H2 (farmgate rises most) supported in
+  point estimates.
+- **RQ3 (pre-registered).** Wholesale–world gap fell 11.2 log points after the law
+  (6.6, p = 0.09) and *rose* 10.6 (4.5, p = 0.02) after the 2024 tariff cut. With the
+  world price as a control, the law effect vanishes (+5.5, ns) and the tariff-cut
+  rise is 15.2 (4.5). H3 rejected for the 2024 cut.
+- **RQ4 (pre-registered; not validated, D11).** No significant difference at the
+  decisive h = 12 (rice-insufficient −0.05 (0.07); high poverty +0.06 (0.05)). At h = 6
+  the high-poverty term is +0.09 (0.04), below the Bonferroni 5% threshold only at h = 6.
+- **RQ5 (pre-registered).** World rice shocks are regressive: gap ΔD B6 = −0.060
+  (0.010); bottom-30% CPI B6 = 0.110 vs all-income 0.045. No change after the law
+  (θ6 = +0.018 (0.021)). Rice weights 8.87% (all) vs 17.87% (bottom 30%) explain about
+  a third of the gap.
+- **Objective 3 (pre-registered E1–E3; E4 exploratory).** Out-of-sample: predicted fall
+  in the rice CPI June 2024 → June 2025 = 21.3% (15.0 world + 6.3 tariff); actual 15.4%,
+  i.e. the world-price part only. Poverty-line family rice spending PHP 2,479/month;
+  predicted tariff saving PHP 151/month (full wedge PHP 367). Suspension episode: rice
+  CPI +21.1% Nov 2025 → Apr 2026 while world peso price +11.4%; world prices alone
+  predict +4.3% by Apr 2026 (from Aug 2025).
+- **Objective 1.** Rice inflation volatility (SD of monthly change) 0.82 (2009–2019M2),
+  1.52 (2019M3–2024M6), 2.33 (2024M7–2026M9). Cross-region CV of retail RMR price
+  6.7% (2015–2017) → about 4% (2021–2024).
 
 ## Documents
 

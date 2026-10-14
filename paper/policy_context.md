@@ -18,6 +18,7 @@ texts. Pulled 14 October 2026.
 | P10 | EO 102, 30 October 2025: extends the suspension to 31 December 2025. | https://lawphil.net/executive/execord/eo2025/eo_102_2025.html |
 | P11 | EO 105, 7 November 2025: keeps the MFN rice tariff at 15% to 31 December 2025; from 1 January 2026 the tariff rises 5 percentage points per 5% fall in international rice prices and falls 5 points per 5% rise, never below 15% or above 35%. | https://lawphil.net/executive/execord/eo2025/eo_105_2025.html |
 | P12 | Imports resumed on 1 January 2026; reports differ on whether the tariff was 15% or 20% in early 2026; a USDA FAS report (February 2026) states 15% through March 2026. | Philstar, 9 January 2026, https://www.philstar.com/headlines/2026/01/09/2499697/philippines-resumes-importing-rice-tariff-still-15 ; USDA FAS GAIN RP2026-0004, https://www.fas.usda.gov/data/gain/2026/02/philippines-philippines-implements-quarterly-rice-import-tariff-adjustment-based-international |
+| P13 | PSA official poverty threshold, full year 2023: PHP 13,873 per month for a family of five (food threshold PHP 9,581). | PSA, *2023 Full Year Official Poverty Statistics* (15 August 2024), https://psa.gov.ph/sites/default/files/phdsd/2023%20FY%20Official%20Poverty%20Statistics%20Publication_15August2024.pdf |
 
 ## Facts still to confirm (open)
 

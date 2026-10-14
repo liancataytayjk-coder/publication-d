@@ -1,0 +1,15 @@
+outcome,spec,term,beta,se,p,nobs,r2
+gap_wholesale,its,post,-11.23136,6.60669,0.08913,201,0.11129
+gap_wholesale,its,tariff15,10.59243,4.54839,0.01987,201,0.11129
+gap_wholesale,its,ban,1.95721,4.25068,0.64520,201,0.11129
+gap_wholesale,its_world,post,5.47674,5.40594,0.31101,201,0.60826
+gap_wholesale,its_world,tariff15,15.22239,4.54508,0.00081,201,0.60826
+gap_wholesale,its_world,ban,-13.77816,4.22582,0.00111,201,0.60826
+gap_wholesale,its_world,ln_world,-0.82971,0.18310,0.00001,201,0.60826
+gap_retail,its,post,-11.44609,7.17867,0.11083,201,0.10453
+gap_retail,its,tariff15,9.38858,4.76538,0.04882,201,0.10453
+gap_retail,its,ban,2.26076,4.01886,0.57375,201,0.10453
+gap_retail,its_world,post,7.35795,5.08507,0.14790,201,0.69260
+gap_retail,its_world,tariff15,14.59933,3.61109,0.00005,201,0.69260
+gap_retail,its_world,ban,-15.44853,3.53021,0.00001,201,0.69260
+gap_retail,its_world,ln_world,-0.93380,0.16633,0.00000,201,0.69260

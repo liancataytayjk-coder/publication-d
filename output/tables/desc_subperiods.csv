@@ -1,0 +1,28 @@
+period,variable,months,mean,sd,annualised_mean
+1995M1-2007M9,dl_rice,153,0.386,1.360,4.628
+1995M1-2007M9,f,153,0.568,4.758,6.813
+1995M1-2007M9,dl_all,153,0.457,0.496,5.482
+2007M10-2008M12 (world crisis),dl_rice,15,1.341,3.313,16.095
+2007M10-2008M12 (world crisis),f,15,3.561,15.243,42.729
+2007M10-2008M12 (world crisis),dl_all,15,0.591,0.678,7.090
+2009M1-2019M2 (quotas),dl_rice,122,0.270,0.825,3.243
+2009M1-2019M2 (quotas),dl_rice_b30,85,0.227,0.938,2.722
+2009M1-2019M2 (quotas),f,122,-0.150,4.372,-1.803
+2009M1-2019M2 (quotas),dl_all,122,0.258,0.292,3.094
+2009M1-2019M2 (quotas),dl_farmgate_palay,109,0.233,2.619,2.799
+2009M1-2019M2 (quotas),dl_wholesale_rmr,109,0.242,3.102,2.902
+2009M1-2019M2 (quotas),dl_retail_rmr,109,0.272,0.936,3.266
+2019M3-2024M6 (35% tariff),dl_rice,64,0.273,1.521,3.275
+2019M3-2024M6 (35% tariff),dl_rice_b30,64,0.282,1.698,3.388
+2019M3-2024M6 (35% tariff),f,64,0.867,5.092,10.408
+2019M3-2024M6 (35% tariff),dl_all,64,0.331,0.420,3.976
+2019M3-2024M6 (35% tariff),dl_farmgate_palay,64,0.415,4.050,4.985
+2019M3-2024M6 (35% tariff),dl_wholesale_rmr,64,0.365,2.063,4.380
+2019M3-2024M6 (35% tariff),dl_retail_rmr,64,0.264,1.741,3.168
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_rice,27,-0.036,2.326,-0.437
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_rice_b30,27,-0.039,2.618,-0.468
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",f,27,-0.764,6.287,-9.171
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_all,27,0.341,0.637,4.088
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_farmgate_palay,27,-0.664,5.502,-7.964
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_wholesale_rmr,27,-0.101,3.192,-1.215
+"2024M7-2026M9 (15% tariff, suspension, indexed tariff)",dl_retail_rmr,27,-0.071,2.737,-0.852
