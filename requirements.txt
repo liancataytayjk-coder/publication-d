@@ -1,0 +1,13 @@
+pandas
+numpy
+statsmodels
+linearmodels
+scipy
+matplotlib
+jinja2
+pypandoc_binary
+requests
+openpyxl
+pyarrow
+pytest
+xlrd

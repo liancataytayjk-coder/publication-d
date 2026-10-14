@@ -1,0 +1,18 @@
+region,poverty_2015,poverty_class,self_sufficiency_index,self_sufficiency_class
+NCR,4.9,Low,0.00,Insufficient
+CAR,26.5,Medium,1.30,Sufficient
+Ilocos Region,22.6,Low,2.70,Sufficient
+Cagayan Valley,30.5,Medium,6.01,Sufficient
+Central Luzon,13.4,Low,2.11,Sufficient
+CALABARZON,10.6,Low,0.16,Insufficient
+MIMAROPA,35.1,High,2.62,Sufficient
+Bicol Region,40.6,High,1.30,Sufficient
+Western Visayas,27.5,Medium,2.25,Sufficient
+Central Visayas,34.2,High,0.19,Insufficient
+Eastern Visayas,48.8,High,1.30,Sufficient
+Zamboanga Peninsula,48.9,High,1.18,Insufficient
+Northern Mindanao,50.8,High,1.09,Insufficient
+Davao Region,30.8,Medium,0.61,Insufficient
+SOCCSKSARGEN,37.5,High,1.54,Sufficient
+Caraga Region,47.0,High,1.37,Sufficient
+BARMM,76.2,High,1.45,Sufficient

@@ -1,0 +1,41 @@
+source,sample,outcome,shock,h,beta,se,note
+Table 1,1994M1-2023M3,rice_cpi_level|NCR,,,70.151,22.858,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|NCR,,,71.873,32.837,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|CAR,,,72.292,19.103,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|CAR,,,67.926,34.329,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Ilocos Region,,,68.450,22.172,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Ilocos Region,,,71.135,34.547,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Cagayan Valley,,,66.884,22.898,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Cagayan Valley,,,72.076,33.356,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Central Luzon,,,67.763,23.568,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Central Luzon,,,69.354,34.283,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|CALABARZON,,,67.744,23.340,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|CALABARZON,,,68.695,32.998,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|MIMAROPA,,,67.188,23.050,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|MIMAROPA,,,68.705,35.421,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Bicol Region,,,67.246,22.596,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Bicol Region,,,71.333,34.599,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Western Visayas,,,69.395,20.773,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Western Visayas,,,67.825,33.159,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Central Visayas,,,73.056,17.955,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Central Visayas,,,69.005,33.843,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Eastern Visayas,,,65.295,24.243,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Eastern Visayas,,,76.451,37.780,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Zamboanga Peninsula,,,68.975,20.335,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Zamboanga Peninsula,,,74.063,35.792,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Northern Mindanao,,,68.714,23.112,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Northern Mindanao,,,76.729,33.162,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Davao Region,,,67.168,22.430,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Davao Region,,,72.667,35.216,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|SOCCSKSARGEN,,,66.131,21.491,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|SOCCSKSARGEN,,,77.271,35.717,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|Caraga Region,,,66.308,21.464,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|Caraga Region,,,69.904,35.325,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Table 1,1994M1-2023M3,rice_cpi_level|BARMM,,,63.529,24.443,beta=mean se=standard deviation of the 2018=100 index level (labelled 'rice price inflation' in the paper)
+Table 1,1994M1-2023M3,fuel_cpi_level|BARMM,,,72.059,34.316,beta=mean se=standard deviation of the 2018=100 index level (labelled 'fuel price inflation'); fuel item not named
+Figure 3,1994M11-2023M3,rpi,thai,1,,,shape: orthogonalized response of rice inflation to Thai 5% shock positive and peaks after one month then dissipates over five months
+Figure 3,1994M11-2023M3,rpi,fpi,0,,,shape: fuel shock has the highest initial response of the four shocks and dissipates completely after three months
+Figure 3,1994M11-2023M3,rpi,urea,0,,,shape: urea shock significant positive highest at onset then drops over five months
+Figure 3,1994M11-2023M3,rpi,enso,0,,,shape: ENSO shock significant positive immediate small dissipates after three months
+Figure 5,1994M11-2023M3,rpi,thai,peak,2.0,,ordering: immediate impact and peak almost twice as large in rice-insufficient regions as in sufficient regions
+Figure 4,1994M11-2023M3,rpi,thai,peak,,,ordering: initial response and persistence larger in low- and medium-poverty regions than in high-poverty regions

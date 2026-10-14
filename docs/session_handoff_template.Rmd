@@ -1,0 +1,77 @@
+---
+title: "Session handoff: <study title>"
+subtitle: "Context for a new Claude Code session"
+date: "<date>"
+output:
+  html_document:
+    toc: true
+  word_document:
+    toc: true
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(eval = FALSE)
+```
+
+# 0. Read this first (for the new Claude session)
+
+The work is in `<owner>/<repo>`, branch **`<branch>`**. The default branch
+`<default>` may not contain it.
+
+```bash
+git fetch origin <branch> && git checkout <branch>   # or merge it into your assigned branch
+python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
+./run_all.sh
+```
+
+Read `CLAUDE.md`, then this file. Follow the rules in section 3.
+
+# 1. How to start a new session (for the user)
+
+1. Go to claude.ai/code and click **New session**.
+2. Pick the repository and environment. Set network access to Full if downloads
+   are needed.
+3. Choose branch `<branch>` if offered.
+4. Upload the files in section 2.
+5. Send this first message: "Read `docs/session_handoff.Rmd` on branch `<branch>`
+   and `CLAUDE.md`, check out the branch, run `./run_all.sh`, then wait."
+
+# 2. Must-upload list (files not in the repository)
+
+| # | File | Why |
+|---|------|-----|
+| 1 | Reference paper PDF | copyright; not committed |
+| 2 | Formatting template(s) | documents must follow them |
+| 3 | Course rubric / journal guidelines | grading or submission criteria |
+| 4 | Names (group, adviser), adviser comments | placeholders |
+
+# 3. Standing rules
+
+- Push only to `<branch>`.
+- No PR unless asked.
+- Raw data untouched and logged.
+- Outputs only from scripts: edit the templates.
+- Decisions log for every choice.
+- Writing style: simple, define terms (words, then formula, then example),
+  paragraphs over bullets.
+
+# 4. The study in one page
+
+<question, notation, model equation, theory, hypotheses>
+
+# 5. Data facts and answers to the user's questions
+
+<coverage by variable and unit; geography reconciliation; what is official vs constructed; proxies>
+
+# 6. Results so far
+
+<headline numbers with SEs; fragility; episode results; replication gate>
+
+# 7. File map
+
+| What | Where | Built by |
+|------|-------|----------|
+
+# 8. Open items
+
+1. ...
